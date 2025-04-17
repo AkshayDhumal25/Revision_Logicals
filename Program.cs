@@ -213,6 +213,39 @@
 // Input: Engineer
 // Output : e3n2g1i1r1
 
+//using System;
+//namespace logicals
+//{
+//    class Program
+//    {
+//        public static void Main(string[] args)
+//        {
+//            string str = "Akshay";
+
+//            int[] count = new int[255];
+
+//            for (int i = 0; i < str.Length; i++)
+//            {
+//                count[str[i]]++;
+//            }
+
+//            for (int i = 0; i < count.Length; i++)
+//            {
+//                if (count[i] > 0)
+//                {
+//                    Console.WriteLine($"{(char)i} : {count[i]}");
+//                }
+//            }
+//        }
+//    }
+//}
+
+
+// 19. count lowercase and uppercase
+// input = &quot;Hello world!&quot;
+// output = uppercase = 1, lowercase = 9
+using System;
+using System.Collections.Generic;
 using System;
 namespace logicals
 {
@@ -220,25 +253,28 @@ namespace logicals
     {
         public static void Main(string[] args)
         {
-            string str = "Akshay";
-
-            int[] count = new int[255];
+            string str = "Hello World";
+            int upperCount = 0;
+            int lowerCount = 0;
 
             for (int i = 0; i < str.Length; i++)
             {
-                count[str[i]]++;
-            }
-
-            for (int i = 0; i < count.Length; i++)
-            {
-                if (count[i] > 0)
+                if (char.IsUpper(str[i]))
                 {
-                    Console.WriteLine($"{(char)i} : {count[i]}");
+                    upperCount++;
+                }
+                if (char.IsLower(str[i]))
+                {
+                    lowerCount++;
                 }
             }
+
+            Console.WriteLine($"UpperCount : {upperCount} and LowerCount : {lowerCount}");
         }
     }
 }
+
+
 
 
 
